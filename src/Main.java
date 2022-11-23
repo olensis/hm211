@@ -31,6 +31,10 @@ public class Main {
         System.out.println("Первая очередь " + gueue);
         System.out.println("Вторая  очередь " + gueue1);
 
+        example();
+
+
+
     }
     private static void addName(String name, Queue <String> queue, Queue <String> queue1){
         if (queue.size() == MAX_SIZE && queue1.size() == MAX_SIZE){
@@ -53,4 +57,24 @@ public class Main {
         }
 
     }
+
+    // задание 2
+    private  static  void example() {
+        List<List<String>> biDemArrList = new ArrayList<>();
+        for (int i = 0; i < 8; i++) {
+            biDemArrList.add(i, new ArrayList<>());
+            for (int j = 0; j < 8; j++) {
+                biDemArrList.get(i).add((i+j)%2==1?"х" : "◯");
+            }
+        }
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                System.out.print(biDemArrList.get(i).get(j) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+
 }
